@@ -1,0 +1,17 @@
+<div  [ngStyle]=" { width:'58%', float:'left', padding:'1%'  } ">
+
+	<h2>Team</h2>
+
+	<ul *ngIf="users.count>0"> <li   [ngStyle]=" { 'list-style': 'none'  } " *ngFor="let i of users.data"> {{ i.fname }} {{ i.lname | isPlaying:i.playing }} </li> </ul>
+
+	<h4>Extra</h4>
+
+	{{extra}}
+
+	<h3>Change Extra Player</h3>
+
+	<input [(ngModel)]= "extra" >
+
+	<p id="test" appAddColor>This is coming from my directive</p>
+
+<div>
